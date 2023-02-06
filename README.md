@@ -6,8 +6,8 @@
 
 * Python 3.10.6;
 * BeautifulSoup 4.11.2;
-* Lxml 4.9.2
-* Requests 2.28.2
+* Lxml 4.9.2;
+* Requests 2.28.2.
 
 ## Как запустить проект:
 
