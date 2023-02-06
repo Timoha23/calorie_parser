@@ -28,7 +28,3 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ``` 
 - Запустите файл calorie_parser.py
-
-
-**Автор:**
-*Ершов Тимофей Сергеевич*
