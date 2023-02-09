@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 
 
 # создаем csv с заголовками
-with open("result.csv", "w", encoding="utf-8-sig") as file:
+with open("result.csv", "w", encoding="utf-8-sig", newline="") as file:
     writer = csv.writer(file)
     writer.writerow(
         (
