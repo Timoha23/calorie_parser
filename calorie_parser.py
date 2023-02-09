@@ -64,11 +64,11 @@ for _ in range(PAGES_COUNT):
     products_data = soup.find("md-table-container").find("tbody").find_all("tr")
     for item in products_data:
         product = item.find_all("td")
-        title = product[0].text
-        calories = product[1].text
-        proteins = product[2].text
-        carbohydrates = product[3].text
-        fats = product[4].text
+        title = product[0].text.strip()
+        calories = product[1].text.strip()
+        proteins = product[2].text.strip()
+        carbohydrates = product[3].text.strip()
+        fats = product[4].text.strip()
 
         with open("result.csv", "a", encoding="utf-8-sig") as file:
             writer = csv.writer(file)
