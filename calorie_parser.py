@@ -64,13 +64,13 @@ for _ in range(PAGES_COUNT):
     products_data = soup.find("md-table-container").find("tbody").find_all("tr")
     for item in products_data:
         product = item.find_all("td")
-        title = product[0].text.strip()
-        calories = product[1].text.strip()
-        proteins = product[2].text.strip()
-        carbohydrates = product[3].text.strip()
-        fats = product[4].text.strip()
+        title = product[0].text.strip().replace(',', '.')
+        calories = product[1].text.strip().replace(',', '.')
+        proteins = product[2].text.strip().replace(',', '.')
+        carbohydrates = product[3].text.strip().replace(',', '.')
+        fats = product[4].text.strip().replace(',', '.')
 
-        with open("result.csv", "a", encoding="utf-8-sig") as file:
+        with open("result.csv", "a", encoding="utf-8-sig", newline="") as file:
             writer = csv.writer(file)
             writer.writerow(
                 (
